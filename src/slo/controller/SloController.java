@@ -36,12 +36,13 @@ public class SloController
 		while(userInt != randInt)
 		{
 			tempUserInt = myPopups.getAnswer("That's the wrong number!");
+			userInt = Integer.parseInt(tempUserInt);
 		}
 		
 		
 		
 		
-		if(!isInteger(tempUserInt))
+		if(isInteger(tempUserInt))
 		{
 			userInt = Integer.parseInt(tempUserInt);
 		}
