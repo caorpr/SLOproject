@@ -17,7 +17,6 @@ public class SloStuff
 	public SloStuff(String yourName, int randomInt, int userInt)
 	{
 		this.yourName = yourName;
-		this.randomInt = randomInt;
 		this.userInt = userInt;
 	}
 	
@@ -32,10 +31,6 @@ public class SloStuff
 		return yourName;
 	}
 	
-	public int getRandomInt()
-	{
-		return randomInt;
-	}
 	
 	public int getUserInt()
 	{
@@ -54,10 +49,6 @@ public class SloStuff
 		this.yourName = yourName;
 	}
 	
-	public void setRandomInt(int randomInt)
-	{
-		this.randomInt = randomInt;
-	}
 	
 	public void setUserInt(int userInt)
 	{
@@ -65,6 +56,13 @@ public class SloStuff
 	}
 
 	
+	
+	public String toString()
+	{
+		String SloStuffInfo = "Your name is " + yourName + " and the random number was: " + userInt;
+		
+		return SloStuffInfo;
+	}
 	
 	
 

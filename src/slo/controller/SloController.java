@@ -23,32 +23,40 @@ public class SloController
 		
 		myPopups.displayResponse("Your name is: " + yourName);
 		
+		
+		
+		
 		int randInt = (int) (Math.random()*10) +1;
+		int userInt;
 		
-		String tempRandomInt = myPopups.getAnswer("I'm thinking of a number between one and ten, what is it?");
+		String tempUserInt = myPopups.getAnswer("I'm thinking of a number between one and ten, what is it?");
 		
-		int randomInt;
+		userInt = Integer.parseInt(tempUserInt);
 		
-		while(randomInt != randInt)
+		while(userInt != randInt)
 		{
-			tempRandomInt = myPopups.getAnswer("That's the wrong number!");
+			tempUserInt = myPopups.getAnswer("That's the wrong number!");
 		}
 		
-		if(!isInteger(tempRandomInt))
+		
+		
+		
+		if(!isInteger(tempUserInt))
 		{
-			randomInt = Integer.parseInt(tempRandomInt);
+			userInt = Integer.parseInt(tempUserInt);
 		}
 		else
 		{
-			randomInt = -12345678;
+			userInt = -12345678;
 		}
 		
-		myPopups.displayResponse("You typed in " + randomInt);
+		myPopups.displayResponse("You typed in " + userInt);
 		
 		
+		myPopups.displayResponse(mySloStuff.toString());
 		
 		
-		
+	}
 		
 		
 		
@@ -74,6 +82,11 @@ public class SloController
 			
 			return isInt;
 		}
+		
+		
+		
+		
+		
 		
 	}
 	
@@ -110,4 +123,4 @@ public class SloController
 	
 	
 
-}
+
